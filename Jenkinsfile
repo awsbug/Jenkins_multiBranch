@@ -2,7 +2,7 @@ node('master')
 {
     stage('Continuous Download') 
 	{
-    git 'https://github.com/sunildevops77/maven.git'
+    git 'thttps://github.com/awsbug/maven.git'
 	}
     stage('Continuous Build') 
 	{
@@ -10,14 +10,14 @@ node('master')
 	}
     stage('Continuous Deployment') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.26.217:/var/lib/tomcat8/webapps/qaenv.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@:54.226.186.98/var/lib/tomcat8/webapps/qaenv.war'
 	}
     stage('Continuous Testing') 
 	{
               sh label: '', script: 'echo "Testing Passed"'
 	}
-    stage('Continuous Delivery') 
-	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.22.88:/var/lib/tomcat8/webapps/prodenv.war'
-	}
+
+
+
+
 }
