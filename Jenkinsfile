@@ -11,7 +11,7 @@ node('master')
 	}
     stage('Continuous Deployment_loans') 
 	{
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@172.31.26.217:/var/lib/tomcat8/webapps/qaenv.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war   ubuntu@:54.226.186.98/var/lib/tomcat9/webapps/qaenv.war'
 	}
 
 
