@@ -2,7 +2,7 @@ node('master')
 {
     stage('Continuous Download') 
 	{
-    git 'thttps://github.com/awsbug/maven.git'
+    git 'https://github.com/awsbug/maven.git'
 	}
     stage('Continuous Build') 
 	{
